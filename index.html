@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>紫微斗数命盘详批 · 乙酉年五月廿八日寅时</title>
+<style>
+  :root{
+    --paper:#f6f1e7;
+    --paper2:#fbf8f1;
+    --ink:#22201c;
+    --ink2:#4a453d;
+    --line:#c9bda6;
+    --line2:#ded4bf;
+    --red:#a3342a;
+    --gold:#9a7326;
+    --blue:#2f5573;
+    --gray:#6d675d;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-size:15px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:32px 20px 80px;}
+
+  /* ---------- header ---------- */
+  header{
+    text-align:center;
+    padding:26px 16px 22px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:30px;
+  }
+  header .kicker{
+    font-size:12px;letter-spacing:.32em;color:var(--gray);
+    text-transform:uppercase;margin-bottom:10px;
+  }
+  header h1{
+    font-family:"Songti SC","STSong","SimSun","Noto Serif SC",serif;
+    font-size:29px;font-weight:600;letter-spacing:.06em;
+    margin:0 0 6px;
+  }
+  header .sub{
+    font-family:"Songti SC","STSong","SimSun",serif;
+    font-size:14px;color:var(--ink2);letter-spacing:.1em;
+  }
+  header .rule{
+    width:64px;height:2px;background:var(--red);
+    margin:16px auto 0;
+  }
+
+  /* ---------- meta ---------- */
+  .meta{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:var(--line2);
+    border:1px solid var(--line2);
+    margin-bottom:38px;
+  }
+  .meta div{background:var(--paper2);padding:11px 14px;}
+  .meta .k{font-size:11px;letter-spacing:.18em;color:var(--gray);margin-bottom:3px;}
+  .meta .v{font-size:14px;color:var(--ink);font-weight:600;}
+  .meta .v em{font-style:normal;color:var(--red);}
+
+  /* ---------- section titles ---------- */
+  h2.sec{
+    font-family:"Songti SC","STSong","SimSun",serif;
+    font-size:20px;font-weight:600;letter-spacing:.05em;
+    margin:52px 0 18px;padding-left:13px;
+    border-left:3px solid var(--red);
+  }
+  h3.sub{
+    font-family:"Songti SC","STSong","SimSun",serif;
+    font-size:16px;font-weight:600;
+    margin:26px 0 10px;color:var(--ink);
+  }
+
+  /* ---------- chart grid ---------- */
+  .chart{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows:repeat(4,minmax(112px,auto));
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin-bottom:14px;
+  }
+  .p{
+    background:var(--paper2);
+    padding:8px 9px 9px;
+    position:relative;
+    display:flex;flex-direction:column;
+  }
+  .p .h{
+    display:flex;justify-content:space-between;align-items:baseline;
+    gap:6px;margin-bottom:6px;
+  }
+  .p .gb{
+    font-family:"Songti SC","STSong","SimSun",serif;
+    font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--ink);
+  }
+  .p .gh{
+    font-size:10.5px;color:var(--gray);letter-spacing:.04em;white-space:nowrap;
+  }
+  .p .main{
+    font-family:"Songti SC","STSong","SimSun",serif;
+    font-size:14.5px;font-weight:600;line-height:1.5;letter-spacing:.02em;
+    margin-bottom:4px;
+  }
+  .p .aux{font-size:11.5px;color:var(--ink2);line-height:1.55;}
+  .p .minor{font-size:10.5px;color:var(--gray);line-height:1.5;margin-top:auto;padding-top:6px;}
+  .p .dx{
+    position:absolute;right:8px;bottom:6px;
+    font-size:9.5px;color:var(--gray);letter-spacing:.03em;
+  }
+  .p.dim{background:#f4efe3;}
+  .p.self{box-shadow:inset 0 0 0 2px var(--red);}
+  .p.body{background:#fbf6e8;}
+
+  .tag{
+    display:inline-block;
+    font-size:10px;font-weight:700;
+    padding:1px 4px;margin-left:3px;
+    border-radius:2px;
+    vertical-align:1px;
+    letter-spacing:.06em;
+  }
+  .t-l{color:#fff;background:var(--red);}       /* 禄 */
+  .t-q{color:#fff;background:var(--gold);}      /* 权 */
+  .t-k{color:#fff;background:var(--blue);}      /* 科 */
+  .t-j{color:#fff;background:var(--gray);}      /* 忌 */
+  .t-z{color:var(--ink2);background:transparent;border:1px solid var(--line);font-weight:400;}
+
+  /* center block */
+  .center{
+    grid-column:2 / span 2;
+    grid-row:2 / span 2;
+    background:var(--paper);
+    padding:18px 20px;
+    text-align:center;
+    display:flex;flex-direction:column;justify-content:center;gap:7px;
+    border:1px solid var(--line);
+  }
+  .center .tt{
+    font-family:"Songti SC","STSong","SimSun",serif;
+    font-size:17px;font-weight:600;letter-spacing:.14em;
+  }
+  .center .ln{height:1px;background:var(--line2);margin:3px 0;}
+  .center .row{font-size:12px;color:var(--ink2);letter-spacing:.03em;}
+  .center .row b{color:var(--ink);font-weight:600;}
+  .center .row .l{color:var(--red);font-weight:700;}
+
+  /* legend */
+  .legend{
+    display:flex;flex-wrap:wrap;gap:14px;
+    font-size:11.5px;color:var(--gray);
+    margin-bottom:34px;padding-left:2px;
+  }
+  .legend span{display:inline-flex;align-items:center;gap:4px;}
+
+  /* ---------- cards ---------- */
+  .cards{display:grid;gap:14px;}
+  .card{
+    border:1px solid var(--line2);
+    background:var(--paper2);
+    padding:16px 18px;
+  }
+  .card .ch{
+    display:flex;align-items:baseline;gap:10px;
+    margin-bottom:8px;padding-bottom:8px;
+    border-bottom:1px dashed var(--line2);
+  }
+  .card .ch .nm{
+    font-family:"Songti SC","STSong","SimSun",serif;
+    font-size:15px;font-weight:700;letter-spacing:.04em;
+  }
+  .card .ch .st{font-size:11.5px;color:var(--gray);}
+  .card p{margin:0 0 8px;font-size:14px;}
+  .card p:last-child{margin-bottom:0;}
+  .card .fl{
+    font-size:12px;color:var(--ink2);
+    background:#f1eadb;border-left:2px solid var(--line);
+    padding:7px 10px;margin-top:8px;line-height:1.7;
+  }
+  .card .fl b{color:var(--red);font-weight:600;}
+
+  /* ---------- key points ---------- */
+  .kp{counter-reset:kp;}
+  .kp .item{
+    position:relative;padding-left:34px;margin-bottom:16px;
+  }
+  .kp .item::before{
+    counter-increment:kp;content:counter(kp);
+    position:absolute;left:0;top:2px;
+    width:22px;height:22px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:11px;font-weight:700;color:#fff;background:var(--ink2);
+    border-radius:50%;
+  }
+  .kp .item .it{
+    font-family:"Songti SC","STSong","SimSun",serif;
+    font-weight:600;font-size:14.5px;display:block;margin-bottom:2px;
+  }
+  .kp .item p{margin:0;font-size:13.5px;color:var(--ink2);}
+
+  /* ---------- timeline ---------- */
+  .tl{border-left:2px solid var(--line2);padding-left:20px;margin-left:6px;}
+  .tl .n{position:relative;margin-bottom:20px;}
+  .tl .n::before{
+    content:"";position:absolute;left:-27px;top:7px;
+    width:9px;height:9px;border-radius:50%;
+    background:var(--paper);border:2px solid var(--line);
+  }
+  .tl .n.on::before{background:var(--red);border-color:var(--red);}
+  .tl .n .yr{
+    font-family:"Songti SC","STSong","SimSun",serif;
+    font-size:14px;font-weight:700;letter-spacing:.03em;
+  }
+  .tl .n .yr em{font-style:normal;font-size:11.5px;color:var(--gray);font-weight:400;margin-left:8px;}
+  .tl .n .yr.cur{color:var(--red);}
+  .tl .n .bd{font-size:13.5px;color:var(--ink2);margin-top:2px;}
+  .tl .n .bd b{color:var(--ink);font-weight:600;}
+
+  /* ---------- table ---------- */
+  table{
+    width:100%;border-collapse:collapse;font-size:13px;
+    border:1px solid var(--line2);background:var(--paper2);
+  }
+  th,td{padding:9px 11px;text-align:left;border-bottom:1px solid var(--line2);vertical-align:top;}
+  th{
+    font-size:11.5px;letter-spacing:.1em;color:var(--gray);font-weight:600;
+    background:#f1eadb;white-space:nowrap;
+  }
+  td.y{font-weight:600;white-space:nowrap;}
+  td.g{white-space:nowrap;font-weight:600;}
+  .g-ji{color:var(--red);}
+  .g-xiong{color:#8a5a1a;}
+  .g-mid{color:var(--gray);}
+  .lvl{display:inline-block;padding:1px 7px;border-radius:9px;font-size:11px;font-weight:600;}
+  .lvl-h{background:#f2ddd8;color:#8f2d24;}
+  .lvl-m{background:#ece5d5;color:#6f6552;}
+
+  /* ---------- advice ---------- */
+  ol.ad{padding-left:20px;margin:0;}
+  ol.ad li{margin-bottom:11px;font-size:14px;}
+  ol.ad li b{color:var(--red);font-weight:600;}
+
+  /* ---------- disclaimer ---------- */
+  .disc{
+    margin-top:56px;padding:18px 20px;
+    border:1px solid var(--line2);background:#f1eadb;
+    font-size:12.5px;color:var(--ink2);line-height:1.8;
+  }
+  .disc b{color:var(--ink);}
+  footer{
+    text-align:center;font-size:11px;color:var(--gray);
+    margin-top:26px;letter-spacing:.14em;
+  }
+
+  @media (max-width:760px){
+    .wrap{padding:20px 12px 60px;}
+    .meta{grid-template-columns:repeat(2,1fr);}
+    header h1{font-size:22px;}
+    .chart{
+      grid-template-columns:repeat(2,1fr);
+      grid-template-rows:auto;
+    }
+    .p{min-height:0;grid-column:auto !important;grid-row:auto !important;order:1;}
+    .center{
+      grid-column:1 / span 2;
+      grid-row:auto;
+      order:0;
+    }
+    .p{order:1;}
+    .p .main{font-size:13px;}
+    .p .aux{font-size:11px;}
+    .p .dx{position:static;display:block;margin-top:6px;}
+    body{font-size:14px;}
+    h2.sec{font-size:17.5px;margin-top:40px;}
+    table{font-size:12px;}
+    th,td{padding:7px 8px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">文墨天机 · 命盘详批</div>
+  <h1>紫微斗数命盘详批</h1>
+  <div class="sub">乙酉年 · 五月廿八日 · 寅时 · 男命</div>
+  <div class="rule"></div>
+</header>
+
+<div class="meta">
+  <div><div class="k">钟表时间</div><div class="v">2005-07-04 05:30</div></div>
+  <div><div class="k">真太阳时</div><div class="v">2005-07-04 04:56<em>（寅时）</em></div></div>
+  <div><div class="k">农历</div><div class="v">乙酉年 五月廿八 寅时</div></div>
+  <div><div class="k">四柱</div><div class="v">乙酉 壬午 己丑 丙寅</div></div>
+  <div><div class="k">五行局</div><div class="v">金四局</div></div>
+  <div><div class="k">命宫 / 身宫</div><div class="v">辰 / 申</div></div>
+  <div><div class="k">命主 / 身主</div><div class="v">廉贞 / 天同</div></div>
+  <div><div class="k">来因宫</div><div class="v">交友宫（乙酉）</div></div>
+</div>
+
+<h2 class="sec">一、十二宫命盘
+<div class="chart">
+
+  <div class="p" style="grid-column:1;grid-row:1">
+    <div class="h"><span class="gb">父母</span><span class="gh">辛巳</span></div>
+    <div class="main">太阳<span class="tag t-z">↓权</span><br>火星</div>
+    <div class="aux">天姚 · 天寿 · 天巫 · 破碎</div>
+    <div class="dx">大限 114–123</div>
+  </div>
+
+  <div class="p" style="grid-column:2;grid-row:1">
+    <div class="h"><span class="gb">福德</span><span class="gh">壬午</span></div>
+    <div class="main">破军<br>文曲 · 右弼<span class="tag t-z">↑科</span></div>
+    <div class="aux">红鸾 · 天厨 · 截空 · 旬空 · 咸池 · 阴煞 · 天德</div>
+    <div class="dx">大限 104–113</div>
+  </div>
+
+  <div class="p" style="grid-column:3;grid-row:1">
+    <div class="h"><span class="gb">田宅</span><span class="gh">癸未</span></div>
+    <div class="main">天机<span class="tag t-l">禄</span></div>
+    <div class="aux">截空 · 旬空 · 寡宿 · 天月</div>
+    <div class="dx">大限 94–103</div>
+  </div>
+
+  <div class="p" style="grid-column:4;grid-row:1">
+    <div class="h"><span class="gb">官禄 <b style="color:#a3342a">·身</b></span><span class="gh">甲申</span></div>
+    <div class="main">紫微<span class="tag t-k">科</span> · 天府<br>文昌 · 左辅 · 天钺</div>
+    <div class="aux">天贵 · 天福 · 台辅</div>
+    <div class="dx">大限 84–93</div>
+  </div>
+
+  <div class="p self" style="grid-column:1;grid-row:2">
+    <div class="h"><span class="gb">命宫</span><span class="gh">庚辰</span></div>
+    <div class="main">武曲<span class="tag t-z">↓权</span><br>擎羊</div>
+    <div class="aux">天官 · 封诰 · 龙德</div>
+    <div class="dx">大限 4–13</div>
+  </div>
+
+  <div class="center">
+    <div class="tt">乙 酉 年 · 男 命</div>
+    <div class="ln"></div>
+    <div class="row">钟表 <b>05:30</b>　真太阳时 <b>04:56</b>（寅）</div>
+    <div class="row">农历 <b>五月廿八</b>　四柱 <b>乙酉 壬午 己丑 丙寅</b></div>
+    <div class="ln"></div>
+    <div class="row">五行局 <b>金四局</b>　命宫 <b>辰</b>　身宫 <b>申</b></div>
+    <div class="row">命主 <b>廉贞</b>　身主 <b>天同</b></div>
+    <div class="row">来因宫 <span class="l">交友（乙酉）</span></div>
+    <div class="ln"></div>
+    <div class="row">生年四化　<span class="l">天机禄</span> 田宅　天梁权 子女　紫微科 官禄　<span class="l">太阴忌</span> 交友</div>
+  </div>
+
+  <div class="p body" style="grid-column:4;grid-row:2">
+    <div class="h"><span class="gb">交友 <b style="color:#a3342a">·来因</b></span><span class="gh">乙酉</span></div>
+    <div class="main">太阴<span class="tag t-j">忌</span><span class="tag t-z">↓忌</span><br>地空</div>
+    <div class="aux">天伤 · 天哭</div>
+    <div class="dx">大限 74–83</div>
+  </div>
+
+  <div class="p" style="grid-column:1;grid-row:3">
+    <div class="h"><span class="gb">兄弟</span><span class="gh">己卯</span></div>
+    <div class="main">天同<br>禄存</div>
+    <div class="aux">八座 · 天虚</div>
+    <div class="dx">大限 14–23</div>
+  </div>
+
+  <div class="p" style="grid-column:4;grid-row:3">
+    <div class="h"><span class="gb">迁移</span><span class="gh">丙戌</span></div>
+    <div class="main">贪狼</div>
+    <div class="aux">恩光 · 天空</div>
+    <div class="dx">大限 64–73</div>
+  </div>
+
+  <div class="p" style="grid-column:1;grid-row:4">
+    <div class="h"><span class="gb">夫妻</span><span class="gh">戊寅</span></div>
+    <div class="main">七杀<br>陀罗</div>
+    <div class="aux">大耗 · 劫煞 · 月德</div>
+    <div class="dx">大限 24–33</div>
+  </div>
+
+  <div class="p" style="grid-column:2;grid-row:4">
+    <div class="h"><span class="gb">子女</span><span class="gh">己丑</span></div>
+    <div class="main">天梁<span class="tag t-q">权</span><span class="tag t-z">↓科</span><br>地劫</div>
+    <div class="aux">天刑 · 龙池 · 凤阁 · 天才 · 年解 · 华盖</div>
+    <div class="dx">大限 34–43</div>
+  </div>
+
+  <div class="p" style="grid-column:3;grid-row:4">
+    <div class="h"><span class="gb">财帛</span><span class="gh">戊子</span></div>
+    <div class="main">廉贞 · 天相<br>天魁 · 铃星</div>
+    <div class="aux">天喜 · 解神</div>
+    <div class="dx">大限 44–53</div>
+  </div>
+
+  <div class="p" style="grid-column:4;grid-row:4">
+    <div class="h"><span class="gb">疾厄</span><span class="gh">丁亥</span></div>
+    <div class="main">巨门<span class="tag t-z">↓忌</span><span class="tag t-z">↑禄</span><br>天马</div>
+    <div class="aux">三台 · 天使 · 孤辰 · 蜚廉</div>
+    <div class="dx">大限 54–63</div>
+  </div>
+
+</div>
+
+<div class="legend">
+  <span><i class="tag t-l">禄</i> 生年化禄</span>
+  <span><i class="tag t-q">权</i> 生年化权</span>
+  <span><i class="tag t-k">科</i> 生年化科</span>
+  <span><i class="tag t-j">忌</i> 生年化忌</span>
+  <span><i class="tag t-z">↓／↑</i> 自化（↓离心·↑向心）</span>
+  <span>红框＝命宫　米底＝来因宫</span>
+</div>
+
+<h2 class="sec">二、格局定调</h2>
+
+<p>命三方四正为「命宫武曲·财帛廉贞天相·官禄紫微天府·迁移贪狼」，是标准的 <b>府相朝垣</b> 叠 <b>紫府同宫</b>，食禄、贵气、格局做得大；但擎羊、铃星两颗煞星插在命宫与财帛，属于 <b>贵中带刑</b>——得之不易，守之更难。</p>
+
+<p>反过来看另一组：七杀在夫妻、破军在福德、贪狼在迁移，<b>杀破狼三颗全落在「非命三方」</b>。这是此盘最关键的结构特征：<b>外面是紫府武相，里面是杀破狼</b>。表面上稳重有分寸，内里随时准备把一切推倒重来；事业上走正路，感情上却想快意恩仇。</p>
+
+<p>还有一层：<b>武曲同时被禄、科、忌三化同入</b>——兄弟己干、子女己干化武曲禄，官禄甲干化武曲科，福德壬干化武曲忌。武曲既是命宫主星又是财星，这意味着<b>钱由自己挣，压力也由自己受</b>，是典型的劳碌印记。</p>
+
+<p>最后一层是生年四化的落点：<b>禄与权都不在命三方，唯有「科」落在官禄（命三方之内）</b>。所以此人求财求权都要绕道，<b>求名得名</b>——这就是该走专业、名声、技术路线的命理依据。</p>
+
+<h2 class="sec">三、性格底色</h2>
+
+<div class="kp">
+  <div class="item">
+    <span class="it">武曲庙旺 ＋ 擎羊庙：硬骨头</span>
+    <p>刚、直、认死理、能扛事、执行快。不擅说软话，情绪外冷内热；受了伤不讲，只把事做完。</p>
+  </div>
+  <div class="item">
+    <span class="it">命宫武曲↓权（离心自化）：权往外泄</span>
+    <p>主见极强，但「权」是散出去而不是收回来的——爱主导、爱表现，事情做到七八分就换方向；钱和权都留不住，赚得动、存不住。</p>
+  </div>
+  <div class="item">
+    <span class="it">身宫紫府 ＋ 文昌左辅天钺 ＋ 生年科：极重体面</span>
+    <p>在意身份、被尊重、有招牌。喜欢平台与制度，受不得被人看轻；在意外在评价，是这个人的软肋也是驱动力。</p>
+  </div>
+  <div class="item">
+    <span class="it">福德破军 ＋ 文曲陷 ＋ 截空旬空：脑内常备「重来一次」</span>
+    <p>想法细、心不定、易失眠；对命理、玄学、宗教天然亲近。破军的破坏欲若没有出口，就会转成自我消耗。</p>
+  </div>
+  <div class="item">
+    <span class="it">交友太阴生年忌又自化忌：客气但设防</span>
+    <p>待人礼貌周到，心里始终有一道墙。「热心帮人、事后被耗」是旧剧本，且会反复重演。</p>
+  </div>
+</div>
+
+<p>一句话概括：<b>对事硬、对人软、对自己狠；外面撑得住场面，里面常常是空的。</b></p>
+
+<h2 class="sec">四、十二宫逐宫与飞化</h2>
+
+<div class="cards">
+
+  <div class="card">
+    <div class="ch"><span class="nm">命宫 · 庚辰</span><span class="st">武曲（庙）＋擎羊（庙）｜天官 · 封诰 · 龙德</span></div>
+    <p>财星坐命又在辰（天罗）——古法称「英雄被困」，早年不易出头，需「破网」而出。擎羊庙旺，凶性转威权：一生适合掌刀、掌财、掌规则，但也带刑伤。</p>
+    <div class="fl"><b>庚干飞化</b>：太阳禄→父母（靠长辈、学校、体制得资源）；武曲权自化（权散出去）；太阴科→交友（用柔态讨人缘，但该宫有忌，<b>科忌交战</b>）；天同忌→兄弟（禄存宫，<b>禄忌交战</b>，储蓄常被消耗）。</div>
+  </div>
+
+  <div class="card">
+    <div class="ch"><span class="nm">兄弟宫 · 己卯</span><span class="st">天同（平）＋禄存（庙）｜八座 · 天虚</span></div>
+    <p>此宫是「实底」。天同温和、禄存有库，说明一生有可倚靠的至亲与基本盘；储蓄本能并不差，只是常被其他宫位抽走。</p>
+    <div class="fl"><b>己干飞化</b>：武曲禄→命（资源最终回到自己身上）；贪狼权→迁移；天梁科→子女；文曲忌→福德（精神内耗）。</div>
+  </div>
+
+  <div class="card">
+    <div class="ch"><span class="nm">夫妻宫 · 戊寅</span><span class="st">七杀（庙）＋陀罗（陷）｜大耗 · 劫煞 · 月德</span></div>
+    <p>七杀主配偶刚强独立、有自己事业；陀罗主慢热与拉扯。此宫无一颗吉星扶持，只有月德能化一点，感情是「慢、磨、反复」的质地。</p>
+    <div class="fl"><b>戊干飞化</b>：贪狼禄→迁移（对象与外地、外出有关）；太阴权→交友（<b>感情与人际纠缠，警惕因朋友圈、同事生是非</b>）；右弼科→福德；天机忌→田宅（生年禄宫，<b>婚姻的核心议题是钱和房</b>）。</div>
+  </div>
+
+  <div class="card">
+    <div class="ch"><span class="nm">子女宫 · 己丑</span><span class="st">天梁（旺·生年权）↓科＋地劫（陷）｜天刑 · 龙池 · 凤阁 · 天才 · 年解 · 华盖</div>
+    <p>带团队、教人、做规范有天赋（天梁权＋天刑＋天才），但地劫在此：<b>合伙、投资、生育皆有耗散</b>，投入容易变成打水漂。</p>
+    <div class="fl"><b>己干飞化</b>：武曲禄→命；贪狼权→迁移；天梁科自化（才华外露但难变现）；文曲忌→福德。</div>
+  </div>
+
+  <div class="card">
+    <div class="ch"><span class="nm">财帛宫 · 戊子</span><span class="st">廉贞（平）＋天相（庙）＋天魁（旺）＋铃星（陷）｜天喜 · 解神</span></div>
+    <p>正财格，贵人财。廉贞主理财手腕，天相主印信，天魁主贵人提拔；铃星陷则主支出急躁、偶有意外开销。</p>
+    <div class="fl"><b>戊干飞化</b>：贪狼禄→迁移（钱在外头赚）；太阴权→交友（<b>又往人际飞</b>）；右弼科→福德；天机忌→田宅（财最终都流向「家」，但该宫双空，留不住）。</div>
+  </div>
+
+  <div class="card">
+    <div class="ch"><span class="nm">疾厄宫 · 丁亥</span><span class="st">巨门（旺）↓忌 ↑禄＋天马（平）｜三台 · 天使 · 孤辰 · 蜚廉</span></div>
+    <p>全盘唯一「禄忌同宫交战」之处：巨门自化忌，又受对宫父母辛干化禄入。主健康<b>好一阵、坏一阵</b>，容易被当成小毛病拖成慢性。</p>
+    <div class="fl"><b>丁干飞化</b>：太阴禄→交友；天同权→兄弟；天机科→田宅；巨门忌自化（病根在自己这里反复）。</div>
+  </div>
+
+  <div class="card">
+    <div class="ch"><span class="nm">迁移宫 · 丙戌</span><span class="st">贪狼（庙）｜恩光 · 天空</span></div>
+    <p>全盘最值钱的一条线。贪狼庙旺主交际魅力、多元机会；恩光主贵人提携；天空则提醒「空忙」——计划宏大、落地打折。</p>
+    <div class="fl"><b>丙干飞化</b>：天同禄→兄弟（禄存宫），与禄存叠成 <b>双禄</b>——出外得财得人；天机权→田宅；文昌科→官禄；廉贞忌→财帛（异地消费大、异地投资易亏）。</div>
+  </div>
+
+  <div class="card">
+    <div class="ch"><span class="nm">交友宫 · 乙酉（来因）</span><span class="st">太阴（旺·生年忌）↓忌＋地空（庙）｜天伤 · 天哭</span></div>
+    <p>全盘最大的破口，也是<b>来因宫</b>——一生的机会与麻烦都从「人」上起。太阴旺而带双忌，最典型的剧本是被「示弱型」的人吸引，帮完忙反被消耗。</p>
+    <div class="fl"><b>乙干飞化</b>：天机禄→田宅；天梁权→子女；紫微科→官禄；太阴忌自化（<b>忌再散一次，人缘留不住</b>）。注意：乙干与生年干相同，此处四化与生年四化完全同源。</div>
+  </div>
+
+  <div class="card">
+    <div class="ch"><span class="nm">官禄宫 · 甲申（身宫）</span><span class="st">紫微（旺·生年科）＋天府（得）＋文昌＋左辅＋天钺｜天贵 · 天福 · 台辅</span></div>
+    <p>全盘最强一宫。紫府同宫加三吉与生年科，主格局大、有领导力、有提携；身宫落此，说明<b>一生重心就在事业与名声</b>。</p>
+    <div class="fl"><b>甲干飞化</b>：廉贞禄→财帛（<b>事业直接生财</b>）；破军权→福德；武曲科→命（事业生名，名实相符）；太阳忌→父母（<b>事业与长辈、体制互忌</b>：此处化忌入父母，父母又化文昌忌回打官禄）。</div>
+  </div>
+
+  <div class="card">
+    <div class="ch"><span class="nm">田宅宫 · 癸未</span><span class="st">天机（陷·生年禄）｜截空 · 旬空 · 寡宿 · 天月</span></div>
+    <p>禄落陷地又逢双空：<b>有置产之念，无守产之力</b>。天机是动星，家宅难安，搬家、换住处是常态。</p>
+    <div class="fl"><b>癸干飞化</b>：破军禄→福德（钱花在兴趣与享受）；巨门权→疾厄；太阴科→交友；贪狼忌→迁移。此外<b>夫妻与财帛两个戊干都化天机忌冲此宫</b>，生年禄被双忌夹冲——钱最终压进房子和家里，然后变成压力。</div>
+  </div>
+
+  <div class="card">
+    <div class="ch"><span class="nm">福德宫 · 壬午</span><span class="st">破军（庙）＋文曲（陷）＋右弼（旺）↑科｜红鸾 · 天厨 · 截空 · 旬空 · 咸池 · 阴煞 · 天德</span></div>
+    <p>精神层面的主战场。破军主思想激进、不甘现状；文曲陷加双空主想得多、落得少、易失眠。红鸾咸池在福德，桃花多想得多、动得少。</p>
+    <div class="fl"><b>壬干飞化</b>：天梁禄→子女；紫微权→官禄；左辅科→官禄；武曲忌→命（<b>所有精神内耗最后都压在自己身上</b>）。</div>
+  </div>
+
+  <div class="card">
+    <div class="ch"><span class="nm">父母宫 · 辛巳</span><span class="st">太阳（旺）↓权＋火星（得）｜天姚 · 天寿 · 天巫 · 破碎</span></div>
+    <p>父亲或男性长辈强势、脾气冲、有能力但压人。破碎在此，与长辈缘分上易有断裂或聚少离多。</p>
+    <div class="fl"><b>辛干飞化</b>：巨门禄→疾厄（禄忌交战的一半）；太阳权自化（长辈要主导）；文曲科→福德；<b>文昌忌→官禄</b>（文书、考试、证书易失手）。</div>
+  </div>
+
+</div>
+
+<p style="margin-top:22px;padding:14px 16px;border:1px solid var(--line2);background:#f1eadb;font-size:13.5px;">
+<b>飞星层面最要紧的三点：</b>①「武曲」被禄、科、忌三化同入，钱与压力都归自己；②「交友宫」是权、科、忌的三化汇聚地——夫妻化权来、财帛化权来、命宫化科来、田宅化科来，再加生年忌与自化忌，一辈子在这个宫位投最多、收最少；③生年忌不在命三方（本体抗打），唯有「科」在命三方（以名立身）。
+</p>
+
+<h2 class="sec">五、健康</h2>
+
+<p>病根集中在三处，且互为因果：</p>
+
+<p><b>其一，巨门＋天马在疾厄。</b>对应咽喉、口腔、食道、胃肠、呼吸道。天马主「奔波致病」，也主病情游走、时轻时重。<br>
+<b>其二，巨门自化忌＋对宫化禄（禄忌交战）。</b>这是全盘最典型的「反复」结构：好一阵、坏一阵，容易被当成小毛病拖成慢性。<br>
+<b>其三，擎羊庙在命。</b>金器、外伤、手术、牙齿、骨骼，一生有刀伤或手术的概率偏高。</p>
+
+<p>另外，<b>文曲陷＋空亡在福德</b>是上游病灶——失眠、焦虑、想太多，其余诸病多由此转化而来。所以治疗顺序应当是<b>先治睡眠与情绪，再谈胃肠与甲状腺</b>。</p>
+
+<p><b>高关注时段</b>：2027（巨门忌入疾厄）、2032（武曲忌入命，主牙齿、骨骼、肺）、2036（流年命宫回武曲擎羊，防外伤）、54–63岁疾厄大限（巨门主场，慢性病的总账期）。</p>
+
+<h2 class="sec">六、学业</h2>
+
+<p>官禄宫（身宫）紫微天府＋文昌＋左辅＋天钺＋生年科：<b>天资、平台、贵人三者都不缺</b>。</p>
+
+<p>但父母辛干文昌忌直入官禄，<b>考试、证书、文书环节容易「临门一脚失误」</b>；福德文曲陷，兴趣广而不专。</p>
+
+<p>结论：<b>实力明显大于考运</b>。他不能靠「临场发挥不失误」这条路，要靠<b>提前量、多备份、降低单点风险</b>——多拿 offer、多备材料、重要考试前把流程重走一遍。</p>
+
+<p>学科倾向<b>偏实用、偏技术、偏管理</b>（武曲＋擎羊＋紫府），纯文艺、纯感性路线走起来吃力。</p>
+
+<h2 class="sec">七、事业</h2>
+
+<p><b>最佳路径：大平台 ＋ 专业深度 ＋ 异地发展。</b></p>
+
+<p>紫微天府在官禄，最忌「小而散」。做老板不如做<b>大机构里的关键人</b>——金融、财务、工程技术、器械设备、供应链、企业管理、专业顾问、体制内专业岗，都是「用武之地」。官禄甲干廉贞化禄入财帛，<b>事业本身就能直接变现</b>，不必绕道副业或投机。</p>
+
+<p>迁移贪狼庙＋化禄入兄弟禄存，<b>异地、跨区域、对外拓展</b>这条线最顺；本地原地打转反而容易卡在天罗里出不来。</p>
+
+<p><b>三条禁忌</b>：早期创业、合伙做生意（子女宫地劫＋交友宫双忌）、重资产囤货（田宅双空＋双忌冲）。</p>
+
+<h2 class="sec">八、财运</h2>
+
+<p><b>正财格，靠本事赚钱，不靠偏财。</b>武曲庙在命，本人就是财星；廉相天魁在财帛，走正路有贵人。</p>
+
+<p>但命宫自化权（离心）＋福德化忌入命，<b>赚得多、守不住</b>；花销容易落在面子、人情与兴趣上（田宅化破军禄入福德）。田宅宫的双重禄忌交战则意味着<b>钱最终压进房子和家里，然后转成压力</b>。</p>
+
+<p>可执行三条：<b>强制储蓄</b>（发薪日自动划走，不靠意志力）／<b>人情额度上限</b>（借钱、担保一律不做）／<b>房产以自住为主</b>，不做杠杆投资。</p>
+
+<h2 class="sec">九、人际关系</h2>
+
+<p>这是全盘最需要正视的一块，来因宫就在此处。</p>
+
+<p>太阴生年忌＋自化忌＋地空＋天哭天伤，典型剧本是：<b>被「示弱型」的人吸引 → 帮了忙 → 反被消耗 → 热心一次退一步</b>；在群体里有「人很多、但没人懂」的孤独感。</p>
+
+<p>更麻烦的是，化权、化科也都往这里飞——<b>他在人际上是用力过猛的</b>，越认真越受伤。</p>
+
+<p>兄弟宫天同＋禄存才是真实的靠山：<b>亲人、极少数至交</b>才是能承重的人；朋友圈属于消耗面，不是资源面。</p>
+
+<p>来因宫在交友，意味着这一生的机会与麻烦都从「人」上起，所以<b>人际边界管理不是技巧问题，是命里的主线功课</b>。</p>
+
+<h2 class="sec">十、婚姻感情</h2>
+
+<p>夫妻宫七杀庙＋陀罗陷，对宫是紫府＋文昌左辅天钺：<b>对象条件不差</b>，多半独立能干、有自己的事业，可能通过工作场合或长辈介绍认识。</p>
+
+<p>但七杀＋陀罗的组合是<b>慢热、拉扯、容易分合反复</b>；夫妻宫无一颗吉星扶持，只有月德能化一点。更要注意夫妻化太阴权入交友（该宫生年忌＋自化忌）——<b>警惕因朋友圈、同事、社交圈而生的是非，以及三角纠缠</b>。</p>
+
+<p>福德破军让<b>自己对稳定不耐</b>；命宫武曲擎羊让<b>表达太直</b>，一吵架就变成讲道理。</p>
+
+<p><b>结论建议</b>：30岁后定事更稳（2034 是决断年，2035 更适于落定）。择偶方向取<b>独立事业型、各自有空间</b>，忌找依赖型或完全依附型。相处上，<b>先接情绪、再讲事实</b>，这是他唯一有效的解药。</p>
+
+<h2 class="sec" id="daxian">十一、大限与关键时间点</h2>
+
+<div class="tl">
+
+  <div class="n">
+    <div class="yr">4–13 虚岁<em>2008–2017</em></div>
+    <div class="bd">命宫本限，武曲擎羊。性格与身体底子在此定型，早年多压制（天罗），但底子打得厚。</div>
+  </div>
+
+  <div class="n on">
+    <div class="yr cur">14–23 虚岁<em>2018–2027 · 当前</em></div>
+    <div class="bd">兄弟宫天同＋禄存。<b>资源进得来</b>（大限禄入命），<b>方向一直不定</b>（大限官禄落田宅天机＋空亡，学业与事业方向反复调整）。大限迁移落交友双忌——<b>这十年「在外交人」是最大的漏点</b>。</div>
+  </div>
+
+  <div class="n">
+    <div class="yr">24–33 虚岁<em>2028–2037</em></div>
+    <div class="bd">夫妻宫七杀＋陀罗。事业冲、感情动。大限迁移在申（紫府文昌左辅）——<b>这是「出网」的十年，异地、外派、换平台可以上台阶</b>；但大限财帛落交友双忌，<b>任何合伙都会漏财</b>。</div>
+  </div>
+
+  <div class="n">
+    <div class="yr">34–43 虚岁<em>2038–2047</em></div>
+    <div class="bd">子女宫天梁权。<b>掌权带团队</b>，但大限财帛落太阴双忌，<b>现金流吃紧</b>，此十年不宜扩张。</div>
+  </div>
+
+  <div class="n">
+    <div class="yr">44–53 虚岁<em>2048–2057</em></div>
+    <div class="bd">财帛宫廉相。大限财帛紫府、大限田宅天同禄存——<b>真正的收获期，置业有成</b>。</div>
+  </div>
+
+  <div class="n">
+    <div class="yr">54–63 虚岁<em>2058–2067</em></div>
+    <div class="bd">疾厄宫巨门。<b>健康主线年</b>，防消化系统与咽喉的慢性问题。</div>
+  </div>
+
+  <div class="n">
+    <div class="yr">64–73 虚岁<em>2068–2077</em></div>
+    <div class="bd">迁移宫贪狼。宜远行、宜交际、宜放下掌控。</div>
+  </div>
+
+</div>
+
+<h3 class="sub">近十年逐项细看</h3>
+
+<table>
+  <thead>
+    <tr><th>年份（虚岁）</th><th>主题</th><th>吉凶</th><th>影响</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="y">2026（22）</td>
+      <td>流年命宫落福德破军，小限回命宫武曲擎羊：<b>内心想变、外面硬撑</b>。流年化廉贞忌入财帛，支出偏大；感情上直来直去容易伤人。</td>
+      <td class="g g-mid">中平</td>
+      <td><span class="lvl lvl-m">中</span></td>
+    </tr>
+    <tr>
+      <td class="y">2027（23）</td>
+      <td>流年命宫落田宅天机＋空亡：<b>环境变动的年</b>，毕业、换城、换住处；巨门忌入疾厄，注意咽喉肠胃。</td>
+      <td class="g g-mid">参半</td>
+      <td><span class="lvl lvl-h">高</span></td>
+    </tr>
+    <tr>
+      <td class="y">2028（24）</td>
+      <td>交脱大限＋流年命宫落官禄紫府（身宫）：<b>事业起势年</b>，最利于求职、进大平台、升学拿证。</td>
+      <td class="g g-ji">大吉</td>
+      <td><span class="lvl lvl-h">高</span></td>
+    </tr>
+    <tr>
+      <td class="y">2029（25）</td>
+      <td>流年命宫落交友太阴双忌：<b>人际与情绪的低谷</b>，防借钱、合伙、感情纠纷。</td>
+      <td class="g g-xiong">凶</td>
+      <td><span class="lvl lvl-h">高</span></td>
+    </tr>
+    <tr>
+      <td class="y">2030（26）</td>
+      <td>流年命宫落迁移贪狼：外出扩张、交际得利。</td>
+      <td class="g g-ji">吉</td>
+      <td><span class="lvl lvl-m">中</span></td>
+    </tr>
+    <tr>
+      <td class="y">2031（27）</td>
+      <td><b>文昌忌双重入官禄</b>：合同、证件、文书、offer 出错。</td>
+      <td class="g g-xiong">凶</td>
+      <td><span class="lvl lvl-h">中高</span></td>
+    </tr>
+    <tr>
+      <td class="y">2032（28）</td>
+      <td>流年命宫落财帛廉相，有进项；但<b>武曲忌入命</b>，大额破财或牙齿、骨骼、肺的问题。</td>
+      <td class="g g-mid">吉中带凶</td>
+      <td><span class="lvl lvl-h">中高</span></td>
+    </tr>
+    <tr>
+      <td class="y">2034（30）</td>
+      <td>流年命宫落夫妻七杀陀罗：<b>感情决断年，定或散</b>。</td>
+      <td class="g g-mid">参半</td>
+      <td><span class="lvl lvl-h">高</span></td>
+    </tr>
+    <tr>
+      <td class="y">2035（31）</td>
+      <td>流年命宫落兄弟天同禄存：<b>适婚、适置业的稳年</b>。</td>
+      <td class="g g-ji">吉</td>
+      <td><span class="lvl lvl-h">高</span></td>
+    </tr>
+    <tr>
+      <td class="y">2036（32）</td>
+      <td>流年命宫回命宫武曲擎羊：自我发力，亦主外伤。</td>
+      <td class="g g-mid">吉中带凶</td>
+      <td><span class="lvl lvl-m">中</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="sec">十二、针对性建议</h2>
+
+<ol class="ad">
+  <li><b>走专业、走平台、走异地，不走合伙。</b>这是他盘里唯一「越走越宽」的路径。</li>
+  <li><b>把守财制度化。</b>自动储蓄、固定支出上限、人情支出单设额度——不靠意志力，靠结构。</li>
+  <li><b>人际边界当作正式议题。</b>不借钱、不做担保、不替人扛责任；对「示弱求助型」的人保持距离，这恰恰是最容易被击穿的地方。</li>
+  <li><b>健康按「上游」治理。</b>先治睡眠与情绪，再谈胃肠与甲状腺；每两年一次胃镜与口腔检查，牙科别拖。</li>
+  <li><b>把破军的「推倒重来」导向可控领域。</b>换城市、换轨道可以，但不要在 2038–2047 的现金流紧期做扩张。</li>
+  <li><b>感情用「柔」补「刚」。</b>要学的不是让步，而是先承认对方情绪，再谈事实。</li>
+  <li><b>发挥「科」的优势。</b>写作、教学、专业输出、拿证、做标准——这是他比同龄人更快积累信用的杠杆。</li>
+</ol>
+
+<div class="disc">
+  <b>说明</b>　本批盘依据三合、飞星、钦天四化与河洛数理交叉校验，属传统命理推演。<b>仅供研究、文化探讨与娱乐参考</b>，请勿作为人生重大决策（婚姻、投资、医疗）的唯一依据；真实决策仍需以现实条件、专业意见为准。命盘信息取自文墨天机导出数据（安星码 C5VUC），真太阳时 04:56 仍属寅时，时辰无争议。
+</div>
+
+<footer>紫微斗数命盘详批 · 乙酉年五月廿八日寅时 · 男命</footer>
+
+</div>
+</body>
+</html>
